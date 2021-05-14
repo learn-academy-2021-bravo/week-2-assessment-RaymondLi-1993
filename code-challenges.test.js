@@ -26,13 +26,30 @@ var num2 = 0
 var num3 = -7
 // Expected output: "-7 is not divisble by three"
 
-
-
+//PESUDO CODE
+//Create a function that takes in a number and checks if its evenly divisble by 3
+//use the moduluo and check if the remainder is = 0
+//if it is 0 then I want to console.log("num is divisible by three")
+//else console.log(num is not divisible by three)
 
 
 // b) Create the function that makes the test pass.
 
+describe ("divisbleByThree", ()=>{
+    test ("returns if the number divides into three evenly", () =>{
+        expect(divisbleByThree(15)).toEqual(`15 is divisble by three`)
+        expect(divisbleByThree(0)).toEqual(`0 is divisble by three`)
+        expect(divisbleByThree(-7)).toEqual(`-7 is not divisble by three`)
+    })
+})
 
+const divisbleByThree = (num) => {
+    if(num % 3 === 0){
+       return `${num} is divisble by three` 
+    } else {
+        return `${num} is not divisble by three`
+    }
+ }
 
 
 
@@ -47,10 +64,30 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
 
+//PESUDO CODE
+//I would iterate over the entire array
+//for each element use the built in method ToUpperCase();
+//the map method would allow me to access each element and I would need to target the first letter
+//capitalized the first letter
+//use slice method
+//return the function which would return an array with all the first letters capitalized
 
+describe ("toUpperCase", ()=>{
+    test ("return first character of each word capitalized", () =>{
+        expect(toUpperCase(["streetlamp", "potato", "teeth", "conclusion", "nephew"])).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(toUpperCase(["temperature", "database", "chopsticks", "mango", "deduction"])).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+      
+    })
+})
 
 
 // b) Create the function that makes the test pass.
+
+const toUpperCase = (array) => {
+    return array.map((elem) => {
+        return elem.charAt(0).toUpperCase() + elem.slice(1);
+    }) 
+ }
 
 
 
@@ -68,7 +105,35 @@ var vowelTester3 = "challenge"
 // Expected output: 2
 
 
+//I can create an array of vowels that will be checked against the string
+//I will than iterate through every single variable of the string
+//at the first instance the string character is a vowel I will return the index;
+
+fdescribe ("vowelChecker", ()=>{
+    test ("return first instance a vowel is found", () =>{
+        expect(vowelChecker("learn")).toEqual(1)
+        expect(vowelChecker("academy")).toEqual(0)
+        expect(vowelChecker("challenge")).toEqual(2)
+    })
+})
+
 
 
 
 // b) Create the function that makes the test pass.
+
+
+const vowelChecker = (array) => {
+  let vowels = ["a", "e", "i", "o", "u"];
+
+  for (let i = 0; i < array.length; ++i){
+      if(vowels.includes(array[i])){
+          return i;
+      }
+  }
+}
+
+
+
+
+
