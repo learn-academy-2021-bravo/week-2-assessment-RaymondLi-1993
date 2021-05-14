@@ -24,7 +24,7 @@ var num2 = 0
 // Expected output: "0 is divisible by three"
 
 var num3 = -7
-// Expected output: "-7 is not divisble by three"
+// Expected output: "-7 is not divisible by three"
 
 //PESUDO CODE
 //Create a function that takes in a number and checks if its evenly divisble by 3
@@ -35,19 +35,19 @@ var num3 = -7
 
 // b) Create the function that makes the test pass.
 
-describe ("divisbleByThree", ()=>{
+fdescribe ("divisbleByThree", ()=>{
     test ("returns if the number divides into three evenly", () =>{
-        expect(divisbleByThree(15)).toEqual(`15 is divisble by three`)
-        expect(divisbleByThree(0)).toEqual(`0 is divisble by three`)
-        expect(divisbleByThree(-7)).toEqual(`-7 is not divisble by three`)
+        expect(divisbleByThree(15)).toEqual(`15 is divisible by three`)
+        expect(divisbleByThree(0)).toEqual(`0 is divisible by three`)
+        expect(divisbleByThree(-7)).toEqual(`-7 is not divisible by three`)
     })
 })
 
 const divisbleByThree = (num) => {
     if(num % 3 === 0){
-       return `${num} is divisble by three` 
+       return `${num} is divisible by three` 
     } else {
-        return `${num} is not divisble by three`
+        return `${num} is not divisible by three`
     }
  }
 
