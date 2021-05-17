@@ -35,11 +35,11 @@ var num3 = -7
 
 // b) Create the function that makes the test pass.
 
-fdescribe ("divisbleByThree", ()=>{
+describe ("divisbleByThree", ()=>{
     test ("returns if the number divides into three evenly", () =>{
-        expect(divisbleByThree(15)).toEqual(`15 is divisible by three`)
-        expect(divisbleByThree(0)).toEqual(`0 is divisible by three`)
-        expect(divisbleByThree(-7)).toEqual(`-7 is not divisible by three`)
+        expect(divisbleByThree(num1)).toEqual(`15 is divisible by three`)
+        expect(divisbleByThree(num2)).toEqual(`0 is divisible by three`)
+        expect(divisbleByThree(num3)).toEqual(`-7 is not divisible by three`)
     })
 })
 
@@ -74,8 +74,8 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 
 describe ("toUpperCase", ()=>{
     test ("return first character of each word capitalized", () =>{
-        expect(toUpperCase(["streetlamp", "potato", "teeth", "conclusion", "nephew"])).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
-        expect(toUpperCase(["temperature", "database", "chopsticks", "mango", "deduction"])).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+        expect(toUpperCase(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(toUpperCase(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
       
     })
 })
@@ -109,11 +109,11 @@ var vowelTester3 = "challenge"
 //I will than iterate through every single variable of the string
 //at the first instance the string character is a vowel I will return the index;
 
-fdescribe ("vowelChecker", ()=>{
+describe ("vowelChecker", ()=>{
     test ("return first instance a vowel is found", () =>{
-        expect(vowelChecker("learn")).toEqual(1)
-        expect(vowelChecker("academy")).toEqual(0)
-        expect(vowelChecker("challenge")).toEqual(2)
+        expect(vowelChecker(vowelTester1)).toEqual(1)
+        expect(vowelChecker(vowelTester2)).toEqual(0)
+        expect(vowelChecker(vowelTester3)).toEqual(2)
     })
 })
 
